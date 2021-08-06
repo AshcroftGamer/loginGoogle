@@ -1,8 +1,8 @@
 const route = require('express').Router();
-const login = require('../mid/login')
+// const login = require('../mid/login')
 
-route.get('/', login.puta, (req, res) => {
-    res.sendFile(__basedir + '../')
+route.get('/',  (req, res) => {
+    res.sendFile(__basedir + '/public/home.html');
 })
 
 module.exports = route;
