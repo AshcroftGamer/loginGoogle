@@ -34,6 +34,7 @@ app.get('/', (req, res) =>{
     res.sendFile(__dirname + '/index.html')
 })
 
+//     let user = req.user;
 
 // app.get('/profile',  (req, res)=>{
 //     let user = req.user;
@@ -47,7 +48,6 @@ app.get('/', (req, res) =>{
 app.get('/logout', (req, res)=>{
     res.clearCookie('session-token');
     res.redirect('/rotalogin')
-
 })
 
 // app.get('/rotapro', (req,res)=>{
