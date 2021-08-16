@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="google-signin-client_id" content="235715095816-sr5jafmcb0g29j2336fe7ms6t27e2mn8.apps.googleusercontent.com">
+    <meta name="google-signin-client_id" content="797033371325-rc0kv1qr8k69bn70vdqot071hjfb2t66.apps.googleusercontent.com">
     <script src="https://apis.google.com/js/platform.js" async defer></script>
     <title>login</title>
 
@@ -26,23 +26,17 @@
 
 
 function onSignIn(googleUser) {
-    // var profile = googleUser.getBasicProfile();
-    // console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
-    // console.log('Name: ' + profile.getName());
-    // console.log('Image URL: ' + profile.getImageUrl());
-    // console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
 
     var id_token = googleUser.getAuthResponse().id_token;
-    // console.log(id_token);
 
     var xhr = new XMLHttpRequest();
-    xhr.open('POST', '/rotalogin');
+    xhr.open('POST', '/login');
     xhr.setRequestHeader('Content-Type', 'application/json');
     xhr.onload = function() {
         console.log('Signed in as: ' + xhr.responseText);
         if(xhr.responseText == 'success'){
             signOut();
-            location.assign('/rotahome')
+            location.assign('/home')
         }
     };
     xhr.send(JSON.stringify({token : id_token}));
