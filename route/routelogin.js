@@ -4,7 +4,7 @@ const cookieParser = require('cookie-parser');
 
 // Google Auth
 const {OAuth2Client} = require('google-auth-library');
-const CLIENT_ID = '235715095816-sr5jafmcb0g29j2336fe7ms6t27e2mn8.apps.googleusercontent.com'
+const CLIENT_ID = process.env.CLIENT_ID;
 const client = new OAuth2Client(CLIENT_ID);
 
 
