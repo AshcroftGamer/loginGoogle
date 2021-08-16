@@ -13,7 +13,7 @@ const rotalogin = require('./route/routelogin');
 const rotalogout = require('./route/rotalogout');
 const rotaperfil = require('./route/rotaperfil');
 const rotapro = require('./route/rotapro');
-const rotahome = require('./route/home');
+const rotahome = require('./route/rotahome');
 
 app.use('/home', rotahome);
 app.use('/pro', rotapro);
