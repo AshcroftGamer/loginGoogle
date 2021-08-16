@@ -1,5 +1,4 @@
 const route = require('express').Router();
-const login = require('../mid/login');
 const cookieParser = require('cookie-parser');
 
 // Google Auth
